@@ -1,0 +1,43 @@
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menghitung luas permukaan balok
+func luasPermukaanBalok(panjang, lebar, tinggi float64) float64 {
+	return 2 * (panjang*lebar + panjang*tinggi + lebar*tinggi)
+}
+
+// Fungsi untuk menghitung volume balok
+func volumeBalok(panjang, lebar, tinggi float64) float64 {
+	return panjang * lebar * tinggi
+}
+
+func watermark(){
+ fmt.Println("==================================")
+ fmt.Println("Nama : Haposan Felix Marcel Siregar")
+  fmt. Println("NIM : 2311102210")
+  fmt.Println("==================================")
+}
+
+func main() {
+	watermark()
+	var panjang, lebar, tinggi float64
+
+	// Input dari pengguna
+	fmt.Println("Masukkan panjang balok:")
+	fmt.Scan(&panjang)
+	fmt.Println("Masukkan lebar balok:")
+	fmt.Scan(&lebar)
+	fmt.Println("Masukkan tinggi balok:")
+	fmt.Scan(&tinggi)
+
+	// Menghitung luas permukaan dan volume
+	luas := luasPermukaanBalok(panjang, lebar, tinggi)
+	volume := volumeBalok(panjang, lebar, tinggi)
+
+	// Menampilkan hasil
+	fmt.Printf("Luas Permukaan Balok: %.2f\n", luas)
+	fmt.Printf("Volume Balok: %.2f\n", volume)
+}
